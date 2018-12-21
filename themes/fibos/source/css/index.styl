@@ -24,7 +24,7 @@ body
       display: none
 
 #hero
-  padding: 100px 40px
+  padding: 100px 40px 0 40px 
   .imac
     text-align: center
     img
@@ -99,12 +99,16 @@ body
     max-width: 1300px
     margin: 0 auto
     text-align: center
+    display: flex
+    justify-content: space-around
   .point
-    width: 33%
-    display: inline-block
+    width: 30%
+    height: 13em
+    border:1px solid #a9aeb2;
     vertical-align: top
     box-sizing: border-box
-    padding: 0 2em
+    padding: 2em 2em
+    border-radius: 5px
     h2
       font-size: 1.75em
       font-family: "PingFangSC-Regular"
@@ -124,7 +128,26 @@ body
          color: $green
          font-size: 1.1em
          font-family: "PingFangSC-Regular"
-         
+  .document
+    max-width: 1300px
+    margin: 0 auto
+    text-align: center
+    padding-top: 80px
+    h2
+      font-size: 2.8em
+    ul
+      display: flex
+      padding: 0
+      justify-content: space-around
+      width: 80%
+      margin: 0 auto
+      list-style-type: none 
+      flex-wrap: wrap
+      li
+        width: 50%
+        padding: 0.8em 0 
+        a
+          font-size: 1.1em
 
 #footer
   // padding: $space 1.5em
