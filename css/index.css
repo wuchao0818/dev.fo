@@ -331,6 +331,7 @@ a.button.gray {
 #main {
   position: relative;
   z-index: 1;
+  padding: 0 60px 30px;
   overflow-x: hidden;
 }
 #nav .nav-link {
@@ -392,7 +393,7 @@ a.button.gray {
 }
 #nav .nav-dropdown a {
   color: #3a5169;
-  text-align: center;
+  text-align: left;
   font-size: 0.9em;
   display: block;
 }
@@ -565,7 +566,7 @@ body.docs #nav {
   width: 100%;
   height: 40px;
   background-color: #fff;
-  z-index: 11;
+  z-index: 9;
   display: none;
   box-shadow: 0 0 2px rgba(0,0,0,0.25);
 }
@@ -686,7 +687,7 @@ body.docs #nav {
     box-sizing: border-box;
   }
   .sidebar .sidebar-inner-index {
-    padding: 40px 10px 10px 20px;
+    padding: 10px 10px 10px 20px;
   }
   .sidebar .search-query {
     width: 200px;
@@ -1065,8 +1066,8 @@ body span,
     font-size: 1em;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1050px) {
   #nav li {
-    margin: 0 0.8em;
+    margin: 0 1.3em;
   }
 }
