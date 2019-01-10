@@ -104,11 +104,13 @@ body
   .point
     width: 30%
     height: 13em
-    border:1px solid #a9aeb2;
+    border:1px solid rgb(223,225,226)
     vertical-align: top
     box-sizing: border-box
     padding: 2em 2em
     border-radius: 5px
+    &:hover, &.current
+      border: 1px solid rgb(168,174,178)
     h2
       font-size: 1.75em
       font-family: "PingFangSC-Regular"
@@ -148,35 +150,40 @@ body
         padding: 0.8em 0 
         a
           font-size: 1.1em
+          color: rgb(121,131,139)
+          &:hover, &.current
+            color: #000
+            text-decoration: underline
 
 #footer
+  margin-top: 6em
   // padding: $space 1.5em
   color: #333333
-  background-color: rgb(235 , 235 , 235)
   ul
     padding: 0
     margin: 0
     display: flex
     li
+      text-align: center
       list-style-type: none
-      padding-right: 3em
+      width:2em
       position: relative
       .qrcode:hover .qrcodeImg
         display: block
       .hero-logo
-        width: 3em
-        height: 2.5em
+        width: 1em
+        height: 1em
       .qrcodeImg
         display: none 
         position: absolute
-        bottom: 60px
-        right: 70px
-        width: 200px
-        height: 200px
+        bottom: 20px
+        right: 20px
+        width: 100px
+        height: 100px
 
   .social-icon
     display: flex
-    justify-content: space-between
+    justify-content: center
     align-items: center
     // margin 0 5px
     padding: 1.8% 7.5% 1.8% 8.3%
@@ -190,20 +197,18 @@ body
       font-size: 1.75em
       color: #333333
     .foot-contact
-      font-size: 1.5em
+      text-align: center
+      font-size: 1.2em
       color: #333333
       margin-bottom: 1.35em
   .Copyright
-    background: rgb(138 ,138 ,138)
     p
       text-align: center  
       margin: 0
       padding: 1em 0
       font-size: 0.8em
-      color: #fff
   a
     font-weight: 700
-    color: #fff
 
 @media screen and (max-width: $width)
   body
@@ -256,10 +261,10 @@ body
   #footer
     ul
       li
-        padding-right: 1em
+        width: 2em 
         .hero-logo
-          width: 1.75em 
-          height: 1.5em 
+          width: 1.2em 
+          height: 1.2em 
         .qrcodeImg
           bottom: 30px
           right: 20px
