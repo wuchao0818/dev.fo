@@ -599,6 +599,11 @@ body.docs #nav {
     display: none;
   }
 }
+@media screen and (max-width: 950px) {
+  #nav {
+    right: 50px;
+  }
+}
 .sidebar {
   position: absolute;
   z-index: 10;
