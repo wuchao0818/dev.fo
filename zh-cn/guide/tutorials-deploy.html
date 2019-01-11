@@ -231,11 +231,6 @@
       
   
       
-    
-      
-      
-  
-      
         
           
           
@@ -246,6 +241,11 @@
         <li>
           <a href="/zh-cn/guide/installation.html" class="sidebar-link">安装</a>
         </li>
+      
+    
+      
+      
+  
       
     
       
@@ -461,6 +461,11 @@
       
   
       
+    
+      
+      
+  
+      
         
           
           
@@ -477,11 +482,6 @@
       
   
       
-    
-      
-      
-  
-      
         
           
           
@@ -492,6 +492,11 @@
         <li>
           <a href="/zh-cn/guide/smart-contract-auth.html" class="sidebar-link">账户权限</a>
         </li>
+      
+    
+      
+      
+  
       
     
       
@@ -534,11 +539,6 @@
         <li>
           <a href="/zh-cn/guide/smart-contract-recipient.html" class="sidebar-link">通知</a>
         </li>
-      
-    
-      
-      
-  
       
     
       
@@ -615,11 +615,6 @@
       
   
       
-    
-      
-      
-  
-      
         
           
           
@@ -632,6 +627,11 @@
         <li>
           <a href="/zh-cn/guide/token-transfer.html" class="sidebar-link">转账</a>
         </li>
+      
+    
+      
+      
+  
       
     
       
@@ -724,11 +724,6 @@
       
   
       
-    
-      
-      
-  
-      
         
           
           
@@ -739,6 +734,11 @@
         <li>
           <a href="/zh-cn/guide/node-nodesNet.html" class="sidebar-link">加入节点网络</a>
         </li>
+      
+    
+      
+      
+  
       
     
       
@@ -796,7 +796,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> code = fibosClient.getCodeSync(config.contract.name, <span class="literal">true</span>);</span><br><span class="line"><span class="built_in">console</span>.log(code);</span><br></pre></td></tr></table></figure>
 <h2 id="上传-ABI-文件"><a href="#上传-ABI-文件" class="headerlink" title="上传 ABI 文件"></a>上传 ABI 文件</h2><p>使用 fs 模块获取 ABI 文件，并通过 <code>setabiSync()</code> 将 ABI 文件上传到节点上。</p>
 <p>以下代码保存至 <code>scripts/deploy.js</code> ：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> abi = <span class="built_in">JSON</span>.parse(fs.readTextFile(<span class="string">`<span class="subst">$&#123;__dirname&#125;</span>/../contracts/todo.js`</span>));</span><br><span class="line">fibosClient.setabiSync(config.contract.name, abi);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> abi = <span class="built_in">JSON</span>.parse(fs.readTextFile(<span class="string">`<span class="subst">$&#123;__dirname&#125;</span>/../contracts/todo.abi`</span>));</span><br><span class="line">fibosClient.setabiSync(config.contract.name, abi);</span><br></pre></td></tr></table></figure>
 <h2 id="部署合约"><a href="#部署合约" class="headerlink" title="部署合约"></a>部署合约</h2><p>我们需要将打包好的 js 合约内容和 abi 文件部署到节点上。</p>
 <p>运行命令</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fibos-todomvc$ fibos  scripts/deploy.js</span><br></pre></td></tr></table></figure>

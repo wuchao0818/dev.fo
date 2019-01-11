@@ -229,6 +229,11 @@
     
       
       
+  
+      
+    
+      
+      
         
           
           
@@ -239,11 +244,6 @@
         <li>
           <a href="/en-us/guide/installation.html" class="sidebar-link">Installation</a>
         </li>
-      
-  
-      
-    
-      
       
   
       
@@ -448,11 +448,6 @@
     
       
       
-  
-      
-    
-      
-      
         
           
           
@@ -474,6 +469,11 @@
     
       
       
+  
+      
+    
+      
+      
         
           
           
@@ -484,11 +484,6 @@
         <li>
           <a href="/en-us/guide/smart-contract-database.html" class="sidebar-link">Database</a>
         </li>
-      
-  
-      
-    
-      
       
   
       
@@ -526,6 +521,11 @@
         <li>
           <a href="/en-us/guide/smart-contract-inlinecall.html" class="sidebar-link">Call In-contract</a>
         </li>
+      
+  
+      
+    
+      
       
   
       
@@ -613,6 +613,11 @@
     
       
       
+  
+      
+    
+      
+      
         
           
           
@@ -625,11 +630,6 @@
         <li>
           <a href="/en-us/guide/token-transfer.html" class="sidebar-link">Transfer</a>
         </li>
-      
-  
-      
-    
-      
       
   
       
@@ -722,6 +722,11 @@
     
       
       
+  
+      
+    
+      
+      
         
           
           
@@ -732,11 +737,6 @@
         <li>
           <a href="/en-us/guide/node-nodesNet.html" class="sidebar-link">Add to nodes network</a>
         </li>
-      
-  
-      
-    
-      
       
   
       
@@ -796,7 +796,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> code = fibosClient.getCodeSync(config.contract.name, <span class="literal">true</span>);</span><br><span class="line"><span class="built_in">console</span>.log(code);</span><br></pre></td></tr></table></figure>
 <h2 id="Upload-ABI-file"><a href="#Upload-ABI-file" class="headerlink" title="Upload ABI file"></a>Upload ABI file</h2><p>Obtain the ABI file using the fs module and deploy the ABI file to the node via<br><code>setabiSync()</code> </p>
 <p>Save the following code to <code>scripts/deploy.js</code> ：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> abi = <span class="built_in">JSON</span>.parse(fs.readTextFile(<span class="string">`<span class="subst">$&#123;__dirname&#125;</span>/../contracts/todo.js`</span>));</span><br><span class="line">fibosClient.setabiSync(config.contract.name, abi);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> abi = <span class="built_in">JSON</span>.parse(fs.readTextFile(<span class="string">`<span class="subst">$&#123;__dirname&#125;</span>/../contracts/todo.abi`</span>));</span><br><span class="line">fibosClient.setabiSync(config.contract.name, abi);</span><br></pre></td></tr></table></figure>
 <h2 id="Deploy-contracts"><a href="#Deploy-contracts" class="headerlink" title="Deploy contracts"></a>Deploy contracts</h2><p>We need to deploy the compiled wasm and ABI files to the node.</p>
 <p>Run command </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fibos-todomvc$ fibos  scripts/deploy.js</span><br></pre></td></tr></table></figure>
